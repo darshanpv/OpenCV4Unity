@@ -58,10 +58,8 @@ target_link_libraries( # Specifies the target library.
 # Links the target library to the log library
 # included in the NDK.
                       ${log-lib})
-
 ```
 - Modify native-lib.cpp code to handle opencv functions that Unity project can call
-
 ```
 #include <jni.h>
 #include <string>
@@ -127,7 +125,6 @@ int FooTestFunction_Internal() {
     return 12345;
 }
 }
-
 ```
 - Now the project is ready to be built in Android Studio: Build->Make project. This will generate a shared library (.so file, in this case called libnative-lib.so) for native code for each architecture in jniLibs. The generated libraries can be found in the folder app/build/intermediates/cmake/debug/obj.
 
@@ -294,8 +291,7 @@ public class NativeLibAdapter
 - More info at https://forum.unity.com/threads/tutorial-using-c-opencv-within-unity.459434/
 - For more details please refer OpenCVBridge unity and UnityAR android project at git repo above.
 
-
-Part-1 Building plugin for MacOsX
+Part-2 Building plugin for MacOsX
 ----------------------------------
 To use OpenCV functions in MAC Os from Native Plugin without using 3rd party plugin from assets store (openCVforUnity)
 
@@ -328,7 +324,7 @@ We will create a Native Plugin for Mac used in Unity as Plugin.
 - In the "Build Settings" → "Library Search Path" field, enter “/usr/local/lib”
 - In the "Build Settings" → "Other Linker Flags" field, enter “-lopencv_dnn -lopencv_ml -lopencv_objdetect -lopencv_shape -lopencv_stitching -lopencv_superres -lopencv_videostab -lopencv_calib3d -lopencv_features2d -lopencv_highgui -lopencv_videoio -lopencv_imgcodecs -lopencv_video -lopencv_photo -lopencv_imgproc -lopencv_flann -lopencv_core”
 
-These are the linked libraries obtained from command
+These are the linked libraries obtained from command-
 ```
 # pkg-config --libs --cflags opencv
 
@@ -431,9 +427,8 @@ int FooTestFunction_Internal() {
 e.g. conv function - In the argument, we received the array of pixels and the vertical and horizontal widths of the image. Because Unity can not use cv :: Mat type, here we are exchanging pixel data of the image as an array of unsigned char. Inside the conv function, I convert it to grayscale using OpenCV, then write it back to pixel array again.
 - Select "Product" → "Build" from the menu bar and build the project, UnityPlugin.bundle will be created in the Products folder.
 
-## Creating OpenCV Plugin in Unity for OsX
-
+## Creating OpenCV Plugin in Unity for MAC OSX
 - Please create a project with Unity and create a Plugin folder under the Asset folder. Create Osx folder under assets-Plugin.
 - Insert "UnityPlugin.bundle" earlier into the created Plugin folder. At this time, you can drag and drop directly from Xcode's Products folder to Unity. (Goto Xcode editor and right click OpenCVPlugin.bundle and select show in folder. From there you can drag it into Unity)
 
--Follow other steps as mentioned in above section to complete OpenCV funcationlaities.
+-Follow other steps as mentioned in above section to complete OpenCV funcationlaities in Unity.
