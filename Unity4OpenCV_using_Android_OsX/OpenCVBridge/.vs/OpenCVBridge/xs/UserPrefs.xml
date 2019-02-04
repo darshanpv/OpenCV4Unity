@@ -1,0 +1,15 @@
+﻿<Properties StartupConfiguration="{6517A63B-053E-EE42-A8BB-AC407C6742CE}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NativeLibAdapter.cs">
+    <Files>
+      <File FileName="Assets/Scripts/DummyController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NativeLibAdapter.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

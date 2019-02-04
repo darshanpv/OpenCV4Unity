@@ -1,0 +1,18 @@
+//
+//  Plugin.pch
+//  UnityPlugIn
+//
+//  Created by Purushottam Darshankar on 21/01/19.
+//  Copyright © 2019 Purushottam Darshankar. All rights reserved.
+//
+#include <string>
+
+extern "C" {
+    
+    void conv(unsigned char* arr, int w, int h);
+    
+    int InitCV_Internal(int width, int height);
+    uint8_t *SubmitFrame_Internal(int width, int height, uint8_t *buffer);
+    int FooTestFunction_Internal();
+    
+}
