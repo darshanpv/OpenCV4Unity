@@ -3,13 +3,16 @@ This project is used to create OpenCV libraries used as Unity Plugin for OsX pla
 ** Prerequisite ** – Xcode and CMake
 
 ## Build and Install of opencv 
-1.	Download openCV and unzip it somewhere on your computer. Create build folder inside it
-2.	Open CMake
-3.	Click Browse Source and navigate to your openCV folder.
-4.	Click Browse Build and navigate to your build Folder.
-5.	Click the configure button. You will be asked how you would like to generate the files. Choose Unix-Makefile from the Drop Down menu and Click OK. CMake will perform some tests and return a set of red boxes appear in the CMake Window.
-6.	Click Configure again, then Click Generate.
-7.	Goto build folder
+1.    Download openCV (from https://github.com/opencv/opencv/releases) and unzip it somewhere on your computer. Create build folder inside it
+2.    Download exra modules from OpenCV. (from https://github.com/opencv/opencv_contrib/releases). Ensure you download the same version. 
+3.    Unzip the folder
+4.    Open CMake
+5.    Click Browse Source and navigate to your openCV folder.
+6.    Click Browse Build and navigate to your build Folder.
+7.    Click the configure button. You will be asked how you would like to generate the files. Choose Unix-Makefile from the drop down menu and Click OK. CMake will perform some tests and return a set of red boxes appear in the CMake Window.
+8.    Search for "OPENCV_EXTRA_MODULES_PATH" and provide the path to modules folder (e.g. /Users/purushottam_d/Programs/OpenCV3_4_5_contrib/modules)
+9.    Click Configure again, then Click Generate.
+10.  Go to build folder
 
 ```
 # cd build
@@ -17,7 +20,7 @@ This project is used to create OpenCV libraries used as Unity Plugin for OsX pla
 # sudo make install
 ```
 
-8.	This will install the opencv libraries on your computer.
+8.   This will install the opencv libraries on your computer.
 
 ## Create Plug-In using Xcode
 We will create a Native Plugin for Mac used in Unity as Plugin. 
